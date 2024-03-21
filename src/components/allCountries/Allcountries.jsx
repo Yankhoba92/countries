@@ -9,17 +9,20 @@ const Allcountries = () => {
   const getAllCountries = async () => {
     try {
       const result = await fetch(`${apiUrl}/all`);
+
       if (!result.ok) throw new Error("Il y'a un probléme ! ");
 
       const data = await result.json();
-      console.log(data);
+
       setCountries(data);
+
       setIsLoading(false);
     } catch (error) {
       setIsLoading(false);
       setError(error.message);
     }
   };
+
   useEffect(() => {
     getAllCountries();
   }, []);
@@ -33,7 +36,7 @@ const Allcountries = () => {
           {error && !isLoading && <h4>{error}</h4>}
 
           {countries?.map((country) => (
-            <div className="country__card">
+            <div className="country__card" key={country.name.common}>
               <div className="country__img">
                 <img src={country.flags.png} alt="" />
               </div>
