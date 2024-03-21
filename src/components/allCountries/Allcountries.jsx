@@ -32,7 +32,7 @@ const Allcountries = () => {
           {isLoading && !error && <h4>Loading.......</h4>}
           {error && !isLoading && <h4>{error}</h4>}
 
-          {countries?.map((country) => {
+          {countries?.map((country) => (
             <div className="country__card">
               <div className="country__img">
                 <img src={country.flags.png} alt="" />
@@ -43,8 +43,8 @@ const Allcountries = () => {
                 <h6>Region: {country.region}</h6>
                 <h6>Capital: {country.capital}</h6>
               </div>
-            </div>;
-          })}
+            </div>
+          ))}
         </div>
       </div>
     </div>
