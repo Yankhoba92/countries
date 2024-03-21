@@ -1,19 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: "Lora", "sans serif";
 }
-.container{
+.container {
   width: 1140px;
   padding: 0px 15px;
   margin: auto !important;
 }
-body{
+body {
   background-color: hsl(207, 26%, 17%);
 }
-.header{
+.header {
   width: 100%;
   height: 70px;
   line-height: 70px;
@@ -21,49 +21,48 @@ body{
   top: 0;
   left: 0;
   background-color: hsl(209, 23%, 22%);
+  z-index: 11;
 }
-.header h5{
+.header h5 {
   display: flex;
   align-items: center;
   font-style: 1.3rem;
   color: #fff;
 }
-.country__bottom{
+.country__bottom {
   display: flex;
   flex-wrap: wrap;
   column-gap: 2rem;
   row-gap: 2rem;
 }
-.country__card{
+.country__card {
   width: 250px;
   padding: 20px;
   border-radius: 5px;
   background-color: hsl(209, 23%, 22%);
   color: #fff;
-
 }
-.country__img img{
- width: 100%;
- height: 150px;
- border-radius:5px 5px 5px ;
- -webkit-border-radius:5px 5px 0px 0px ;
- -moz-border-radius:5px 5px 5px ;
- -ms-border-radius:5px 5px 5px ;
- -o-border-radius:5px 5px 5px ;
+.country__img img {
+  width: 100%;
+  height: 150px;
+  border-radius: 5px 5px 5px;
+  -webkit-border-radius: 5px 5px 0px 0px;
+  -moz-border-radius: 5px 5px 5px;
+  -ms-border-radius: 5px 5px 5px;
+  -o-border-radius: 5px 5px 5px;
 }
-.all__country__wrapper{
-  margin-top:100px;
+.all__country__wrapper {
+  margin-top: 100px;
 }
-.country__data{
+.country__data {
   padding: 20px;
-
 }
-.country__data h3{
+.country__data h3 {
   margin-top: 10px;
   margin-bottom: 15px;
   font-weight: 500;
 }
-.country__data h6{
+.country__data h6 {
   margin-bottom: 10px;
   font-weight: 400;
   opacity: 80%;
@@ -73,7 +72,7 @@ body{
   text-align: center;
   margin-top: 15px;
 }
-input{
+input {
   padding: 10px 25px;
   color: #fff;
   border-radius: 5px;
@@ -82,7 +81,22 @@ input{
   outline: none;
   margin-bottom: 50px;
 }
-::placeholder{
+::placeholder {
   color: #fff;
-  
+}
+.country__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+select {
+  padding: 10px 25px;
+  background-color: hsl(209, 23%, 22%);
+  margin-bottom: 50px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
 }
