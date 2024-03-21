@@ -100,3 +100,39 @@ select {
   color: #fff;
   cursor: pointer;
 }
+.country__info__wrapper {
+  margin-top: 120px;
+}
+.country__info__container {
+  display: flex;
+  column-gap: 3rem;
+}
+.country__info,
+.country__info-img {
+  width: 50%;
+}
+button {
+  padding: 10px 25px;
+  color: #fff;
+  background-color: hsl(209, 23%, 22%);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 125px;
+  margin-bottom: 50px;
+  border-radius: 5px;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+.country__info h3 {
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+.country__info-left, h5, span{
+  color: #fff;
+  opacity: 85%;
+}
