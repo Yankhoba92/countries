@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { apiUrl } from "../util/api";
 import SearchInput from "../Search/SearchInput";
 import FilterCountry from "../FilterCountry/FilterCountry";
+import { Link } from "react-router-dom";
 
 const Allcountries = () => {
   const [countries, setCountries] = useState([]);
@@ -50,7 +51,6 @@ const Allcountries = () => {
     }
   };
 
-
   useEffect(() => {
     getAllCountries();
   }, []);
@@ -63,7 +63,7 @@ const Allcountries = () => {
             <SearchInput onSearch={getCountryByName} />
           </div>
           <div className="filter">
-            <FilterCountry onSelect={getCountryByRegion}/>
+            <FilterCountry onSelect={getCountryByRegion} />
           </div>
         </div>
 
@@ -72,17 +72,19 @@ const Allcountries = () => {
           {error && !isLoading && <h4>{error}</h4>}
 
           {countries?.map((country) => (
-            <div className="country__card" key={country.name.common}>
-              <div className="country__img">
-                <img src={country.flags.png} alt="" />
+            <Link to={`country/${country.name.common}`}>
+              <div className="country__card" key={country.name.common}>
+                <div className="country__img">
+                  <img src={country.flags.png} alt="" />
+                </div>
+                <div className="country__data">
+                  <h3>{country.name.common}</h3>
+                  <h6>Population: {country.population}</h6>
+                  <h6>Region: {country.region}</h6>
+                  <h6>Capital: {country.capital}</h6>
+                </div>
               </div>
-              <div className="country__data">
-                <h3>{country.name.common}</h3>
-                <h6>Population: {country.population}</h6>
-                <h6>Region: {country.region}</h6>
-                <h6>Capital: {country.capital}</h6>
-              </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>
